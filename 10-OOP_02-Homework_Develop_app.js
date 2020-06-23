@@ -39,7 +39,68 @@ async function main(){
             message:"How many people work under you?",
         }
     ])
-}
+
+    team.push( new Manager (managerData.name, ID++, managerData.email, managerData.officeNumber, managerData.count))
+
+        for(let userCnt=1; userCnt <= managerData.count; userCnt++){
+            const user = await inquirer .prompt([{
+                name:'type',
+                type:'list',
+                message: `For persons ${userCnt}/${managerData}`,
+                choices:["intern", "engineer"]
+            }
+            ])
+            if(user.type == "engineer"){
+                const userData = await inquirer .prompt([{
+                    name:'name',
+                    type:"input",
+                    message:"What is the engineers name?"
+                },
+                {
+                    name:'email',
+                    type:"input",
+                    message:"What is the engineers email?"
+                },
+                {
+                    name:'github',
+                    type:"input",
+                    message:"What is the engineers github?"
+                
+                }]);
+                
+                team.push( new Engineer(userData.name, ID++, userData.email, userData.github))
+
+            }else{ userData = await inquirer .prompt([{
+                    name:'name',
+                    type:"input",
+                    message:"What is the interns name?"
+            },
+            {
+                    name:'email',
+                    type:"input",
+                    message:"What is the engineers name?"
+            },
+            {
+                    name:'school',
+                    type:"input",
+                    message:"What school did they attend?"
+            }]);
+
+            team.push( new Intern(userData.name, ID++, userData.email, userData.school))
+            }
+        }
+
+        const html = render(team)
+
+
+
+
+
+
+
+
+
+
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
