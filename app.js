@@ -66,7 +66,8 @@ async function main(){
                     type:"input",
                     message:"What is the engineers github?"
                 
-                }]);
+                }
+            ]);
                 
                 team.push( new Engineer(userData.name, ID++, userData.email, userData.github))
 
@@ -78,23 +79,24 @@ async function main(){
             {
                     name:'email',
                     type:"input",
-                    message:"What is the engineers name?"
+                    message:"What is the interns email?"
             },
             {
                     name:'school',
                     type:"input",
                     message:"What school did they attend?"
-            }]);
+            }
+            ]);
 
             team.push( new Intern (userData.name, ID++, userData.email, userData.school))
             }
         }
-
+    
         const html = render(team)
 
         fs.writeFileSync(outputPath, html)
         console.log(`finshed, available in ${outputPath}`)
-    }
+}
 
     main();
 
