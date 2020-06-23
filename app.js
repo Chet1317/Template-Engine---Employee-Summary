@@ -21,22 +21,22 @@ async function main(){
         { 
             name:"name",
             type:'input',
-            message:'What is your name?',
+            message:'What is the managers name?',
         },
         {
             name:'email',
             type:'input',
-            message:'What is your email?',
+            message:'What is the managers email?',
         },
         {
             name:'officeNumber',
             type:'input',
-            message:'What is your offic number?',  
+            message:'What is the managers offic number?',  
         },
         {
             name:'count',
             type:'input',
-            message:"How many people work under you?",
+            message:"How many people work under them?",
         }
     ])
 
@@ -86,13 +86,14 @@ async function main(){
                     message:"What school did they attend?"
             }]);
 
-            team.push( new Intern(userData.name, ID++, userData.email, userData.school))
+            team.push( new Intern (userData.name, ID++, userData.email, userData.school))
             }
         }
 
         const html = render(team)
 
         fs.writeFileSync(outputPath, html)
+        console.log(`finshed, available in ${outputPath}`)
     }
 
     main();
