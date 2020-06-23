@@ -1,0 +1,26 @@
+{
+  "name": "template-engine---employee-summary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "10-OOP_02-Homework_Develop_app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chet1317/Template-Engine---Employee-Summary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chet1317/Template-Engine---Employee-Summary/issues"
+  },
+  "homepage": "https://github.com/Chet1317/Template-Engine---Employee-Summary#readme",
+  "dependencies": {
+    "inquirer": "^7.2.0",
+    "package.json": "^2.0.1"
+  }
+}
