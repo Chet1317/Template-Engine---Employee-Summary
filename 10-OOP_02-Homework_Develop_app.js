@@ -9,8 +9,37 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { async } = require("rxjs/internal/scheduler/async");
 
+let ID =1;
 
+async function main(){
+    console.log(`[main] string ...`)
+    const  team = []
+
+    const managerData = await inquirer .prompt([
+        { 
+            name:"name",
+            type:'input',
+            message:'What is your name?',
+        },
+        {
+            name:'email',
+            type:'input',
+            message:'What is your email?',
+        },
+        {
+            name:'officeNumber',
+            type:'input',
+            message:'What is your offic number?',  
+        },
+        {
+            name:'count',
+            type:'input',
+            message:"How many people work under you?",
+        }
+    ])
+}
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
