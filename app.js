@@ -14,7 +14,7 @@ const { async } = require("rxjs/internal/scheduler/async");
 let ID =1;
 
 async function main(){
-    console.log(`[main] string ...`)
+    console.log(`[main] Starting ...`)
     const  team = []
 
     const managerData = await inquirer .prompt([
