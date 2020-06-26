@@ -1,0 +1,20 @@
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #56d06e;
+    border-radius: .3rem;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #a967ea;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background-color: darkseagreen;
+    padding: 1.25rem;
+}
